@@ -43,3 +43,9 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\r
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\itemtypes\waxtablet.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\patches\paper_patch.json.disabled
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\waxtablet.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergpress.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergpresstop.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\inventory.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-movable.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-static.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\textures\block\gutenbergpressuv.png
