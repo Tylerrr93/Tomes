@@ -9,7 +9,7 @@
 	"variantgroups": [
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],
-	"behaviors": [{ "name": "HorizontalOrientable" }],
+	"behaviors": [{ "name": "HorizontalOrientable" }], 
 	"shapeInventory": { "base": "gutenbergpress/inventory" },
 	"shapebytype": {
 		"*-north": { "base": "gutenbergpress/part-static", "rotateY": 0 },
@@ -34,9 +34,9 @@
 		"all": false
 	},
 	"sounds": {
-		"place": "block/planks",
-		"break": "block/planks",
-		"hit": "block/planks"
+		"place": "game:block/planks",
+		"break": "game:block/planks",
+		"hit": "game:block/planks"
 	},
 	"selectionBoxes": [
 		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.875, "z2": 1, "rotateYByType": { "*-west": 90 } },
@@ -52,6 +52,6 @@
 	],
 	"guiTransform": {
 		"origin": { "x": 0.5, "y": 1, "z": 0.5 },
-		"scale": 0.9
+		"scale": 0.6
 	}
 }

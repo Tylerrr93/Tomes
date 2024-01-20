@@ -1,7 +1,8 @@
 {
 	"code": "gutenbergpresstop",
 	"class": "gutenbergpresstop",
-	"handbook": { "exclude": true },
+	"entityClass": "blockentitygutenbergpresstop",
+	"handbook": { "exclude": false },
 	"variantgroups": [
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],
@@ -16,10 +17,10 @@
 	"lightAbsorption": 0,
 	"drops": [],
 	"sounds": {
-		"place": "block/planks",
-		"walk": "walk/wood",
-		"hit": "block/planks",
-		"break": "block/planks"
+		"place": "game:block/planks",
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks"
 	},
 	"selectionBoxes": [
 		{ "x1": 0.2326, "y1": -0.25, "z1": 0.2326, "x2": 0.7626, "y2": 0.3125, "z2": 0.7626, "rotateYByType": { "*-east": 90 } },

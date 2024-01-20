@@ -1,7 +1,8 @@
 {
 	"code": "gutenbergpresstop",
 	"class": "gutenbergpresstop",
-	"handbook": { "exclude": true },
+	"creativeinventory": { "general": ["gutenbergpresstop-west"] },
+	"handbook": { "exclude": false },
 	"variantgroups": [
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],

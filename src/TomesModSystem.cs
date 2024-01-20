@@ -11,9 +11,8 @@ namespace Tomes
             api.RegisterItemClass("customitembook", typeof(CustomItemBook));
             api.RegisterItemClass("itemwaxtablet", typeof (ItemWaxTablet));
             api.RegisterBlockClass("blockgutenbergpress", typeof(BlockGutenbergPress));
-            api.RegisterBlockClass("gutenbergpresstop", typeof(BlockGutenbergPressTop));
+            api.RegisterBlockClass("blockgutenbergpresstop", typeof(BlockGutenbergPressTop));
             api.RegisterBlockEntityClass("blockentitygutenbergpress", typeof(BlockEntityGutenbergPress));
-            api.RegisterBlockEntityClass("blockentitygutenbergpresstop", typeof(BlockEntityGutenbergPressTop));
         }
     }
 }

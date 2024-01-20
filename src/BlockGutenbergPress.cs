@@ -30,6 +30,14 @@ namespace Tomes
             return block.IsReplacableBy(this);
         }
 
+        public override void OnBlockPlaced(IWorldAccessor world, BlockPos pos, ItemStack byItemStack = null)
+        {
+            base.OnBlockPlaced(world, pos, byItemStack);
+
+            Block toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergpresstop-" + Variant["side"]));
+            world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.UpCopy());
+        }
+
         public override void OnBlockBroken(
             IWorldAccessor world,
             BlockPos pos,
