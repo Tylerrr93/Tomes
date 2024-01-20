@@ -1,0 +1,5 @@
+[
+    { "file": "game:itemtypes/lore/paper", "op": "remove", "path": "/attributes/rolledShape" }
+]
+  
+  

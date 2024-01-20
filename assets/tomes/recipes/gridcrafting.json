@@ -1,0 +1,20 @@
+[
+    {
+        "ingredientPattern": "RR,RR,RR",
+        "enabled": true,
+        "ingredients": {
+          "R": {
+            "type": "item",
+            "code": "game:stone-*",
+            "name": "rock"
+          }
+        },
+        "width": 2,
+        "height": 3,
+        "output": {
+          "type": "item",
+          "code": "stonetablet-{rock}-editable",
+          "quantity": 1
+        }
+    }
+]
