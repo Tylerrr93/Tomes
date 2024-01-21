@@ -6,6 +6,7 @@
 	"attributes": {
 		"textureCodeForBlockColor": "wood"
 	},
+	"maxstacksize": 1,
 	"variantgroups": [
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],

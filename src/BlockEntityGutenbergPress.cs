@@ -18,6 +18,7 @@ namespace Tomes
 
             if (ownBlock != null)
             {
+                // This calls the top half of the gutenberg press to be tessalated into the model at initialization 
                 Shape shape = Shape.TryGet(api, "tomes:shapes/gutenbergpress/part-movable.json");
 
                 if (api.Side == EnumAppSide.Client)
