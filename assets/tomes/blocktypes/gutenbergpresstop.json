@@ -1,6 +1,6 @@
 {
 	"code": "gutenbergpresstop",
-	"class": "gutenbergpresstop",
+	"class": "blockgutenbergpresstop",
 	"creativeinventory": { "general": ["gutenbergpresstop-west"] },
 	"handbook": { "exclude": false },
 	"variantgroups": [

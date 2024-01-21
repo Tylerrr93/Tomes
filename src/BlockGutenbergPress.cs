@@ -1,5 +1,6 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Client;
 
 namespace Tomes
 {
@@ -19,6 +20,12 @@ namespace Tomes
             if (!IsClear(world, blockPos.EastCopy())) return false;
             if (!IsClear(world, blockPos.SouthCopy())) return false;
             if (!IsClear(world, blockPos.WestCopy())) return false;
+
+            // Check of ground level diagonal blocks for clearance
+            if (!IsClear(world, blockPos.AddCopy(1, 0, 1))) return false;
+            if (!IsClear(world, blockPos.AddCopy(1, 0, -1))) return false;
+            if (!IsClear(world, blockPos.AddCopy(-1, 0, 1))) return false;
+            if (!IsClear(world, blockPos.AddCopy(-1, 0, -1))) return false;
 
             return true;
         }
@@ -53,5 +60,6 @@ namespace Tomes
 
             base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
         }
+
     }
 }
