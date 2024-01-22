@@ -49,3 +49,4 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\s
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-movable.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-static.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\textures\block\gutenbergpressuv.png
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1north.json

@@ -41,15 +41,32 @@ namespace Tomes
         {
             base.OnBlockPlaced(world, pos, byItemStack);
 
+            // Here for fruitpress reference
             Block toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergpresstop-" + Variant["side"]));
             world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.UpCopy());
+
+            // Get the placed press variant to determine multiblock locations (n/e/s/w)
+            string variant = Variant["side"] as string;
+            if (variant == "north")
+            {
+
+                // Variant is north, add blocks appropriately
+                //Y1North
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, -1));
+
+            } else if (variant == "east") {
+
+                // Variant is east, add blocks appropriately
+                //Y1North
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 0));
+
+            }
+
         }
 
-        public override void OnBlockBroken(
-            IWorldAccessor world,
-            BlockPos pos,
-            IPlayer byPlayer,
-            float dropQuantityMultiplier = 1f)
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
             // Handle the removal of the additional top block
             Block upBlock = world.BlockAccessor.GetBlock(pos.UpCopy());
@@ -58,8 +75,36 @@ namespace Tomes
                 world.BlockAccessor.SetBlock(0, pos.UpCopy());
             }
 
+            // Get the placed press variant to determine removal of multiblocks
+            string variant = Variant["side"] as string;
+            
+            if (variant == "north")
+            {
+                // Variant is north, remove blocks appropriately
+                //Y1North
+                Block y1North = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, -1));
+                if (y1North.Code.Path == "gutenbergy1north-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, -1));
+                }
+            
+            } else if (variant == "east") {
+                // Variant is east, remove blocks appropriately
+                Block y1North = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 0));
+                if (y1North.Code.Path == "gutenbergy1north-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 0));
+                }
+            }
+
             base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
         }
+
+        //If returns true, allows you to select individual selection boxes in the block
+        //public override bool DoParticalSelection(IWorldAccessor world, BlockPos pos)
+        //{
+            //return true;
+        //}
 
     }
 }

@@ -1,8 +1,7 @@
 {
-	"code": "gutenbergpresstop",
-	"class": "blockgutenbergpresstop",
-	"creativeinventory": { "general": ["gutenbergpresstop-west"] },
-	"handbook": { "exclude": false },
+	"code": "gutenbergy1north",
+	"class": "gutenbergy1north",
+	"handbook": { "exclude": true },
 	"variantgroups": [
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],
@@ -23,12 +22,10 @@
 		"break": "game:block/planks"
 	},
 	"selectionBoxes": [
-		{ "x1": 0.2326, "y1": -0.25, "z1": 0.2326, "x2": 0.7626, "y2": 0.3125, "z2": 0.7626, "rotateYByType": { "*-we": 90 } },
-		{ "x1": 0.0625, "y1": 0.25, "z1": 0.375, "x2": 0.9375, "y2": 1, "z2": 0.625, "rotateYByType": { "*-we": 90 }  }
+		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
 	],
 	"collisionBoxes": [
-		{ "x1": 0.2515, "y1": -0.2499, "z1": 0.2515, "x2": 0.7563, "y2": 0.3125, "z2": 0.7563, "rotateYByType": { "*-we": 90 } },
-		{ "x1": 0.0625, "y1": 0.25, "z1": 0.375, "x2": 0.9375, "y2": 1, "z2": 0.625, "rotateYByType": { "*-we": 90 }  }
+		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 1, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
 	],
 	"guiTransform": {
 		"origin": { "x": 0.5, "y": 1, "z": 0.5 },

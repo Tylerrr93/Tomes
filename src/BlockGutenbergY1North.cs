@@ -3,15 +3,25 @@ using Vintagestory.API.MathTools;
 
 namespace Tomes
 {
-    public class BlockGutenbergPressTop : Block
+    public class BlockGutenbergY1North : Block
     {
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {
-            // This just tells the presses second block that if its the one broken, run the onbroken behavior for the main gutenpress 
-            // block (which is to remove this block and drop/break the main one)
-            var block = world.BlockAccessor.GetBlock(pos.DownCopy()) as BlockGutenbergPress;
-            if (block != null) block.OnBlockBroken(world, pos.DownCopy(), byPlayer, dropQuantityMultiplier);
+            // This essentially just reflects the main presses block break behavior onto this block, needed for multiblock structures
+            string variant = Variant["side"] as string;
+            // Add debug logging to check the variant
+            if (variant == "north")
+            {
+                // Variant is north, find source block to remove appropriately
+                Block block = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, 1)) as BlockGutenbergPress;
+                if (block != null) block.OnBlockBroken(world, pos.AddCopy(0, 0, 1), byPlayer, dropQuantityMultiplier);
+            } else if (variant == "east") {
+                // Variant is north, find source block to remove appropriately
+                Block block = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 0)) as BlockGutenbergPress;
+                if (block != null) block.OnBlockBroken(world, pos.AddCopy(-1, 0, 0), byPlayer, dropQuantityMultiplier);
+            }
+
         }
 
         //public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
