@@ -58,6 +58,9 @@ namespace Tomes
                 //Y1West
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 0));
+                //Y1East
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1east-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 0));
 
             } else if (variant == "east") {
                 // Variant is east
@@ -73,6 +76,9 @@ namespace Tomes
                 //Y1West
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, -1));
+                //Y1East
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1east-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, 1));
 
             } else if (variant == "south") {
                 // Variant is south
@@ -88,6 +94,9 @@ namespace Tomes
                 //Y1West
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 0));
+                //Y1East
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1east-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 0));
 
             } else if (variant == "west") {
                 // Variant is west
@@ -103,6 +112,9 @@ namespace Tomes
                 //Y1West
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, 1));
+                //Y1East
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1east-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, -1));
             }
 
         }
@@ -146,6 +158,12 @@ namespace Tomes
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 0));
                 }
+                //Y1East
+                Block y1East = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 0));
+                if (y1East.Code.Path == "gutenbergy1east-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 0));
+                }
             
             } else if (variant == "east") {
                 // Variant is east
@@ -173,6 +191,13 @@ namespace Tomes
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, -1));
                 }
+                //Y1East
+                Block y1East = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, 1));
+                if (y1East.Code.Path == "gutenbergy1east-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, 1));
+                }
+                
             
             } else if (variant == "south") {
                 // Variant is south
@@ -200,6 +225,12 @@ namespace Tomes
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 0));
                 }
+                //Y1East
+                Block y1East = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 0));
+                if (y1East.Code.Path == "gutenbergy1east-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 0));
+                }
 
             } else if (variant == "west") {
                 // Variant is west
@@ -226,6 +257,12 @@ namespace Tomes
                 if (y1West.Code.Path == "gutenbergy1west-" + variant)
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, 1));
+                }
+                //Y1East
+                Block y1East = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, -1));
+                if (y1East.Code.Path == "gutenbergy1east-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, -1));
                 }
             }
 

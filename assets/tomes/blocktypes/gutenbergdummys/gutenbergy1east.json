@@ -1,0 +1,38 @@
+{
+	"code": "gutenbergy1east",
+	"class": "blockgutenbergy1east",
+	"handbook": { "exclude": true },
+	"variantgroups": [
+		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
+	],
+	"behaviors": [{ "name": "HorizontalOrientable" }],
+	"shape": { "base": "game:block/basic/nothing" },	
+	"drawtype": "json",
+	"sidesolid": { "all": false },
+	"sideopaque": { "all": false },
+	"blockmaterial": "wood",
+	"replaceable": 160,
+	"resistance": 4,
+	"lightAbsorption": 0,
+	"drops": [],
+	"sounds": {
+		"place": "game:block/planks", 
+		"walk": "game:walk/wood",
+		"hit": "game:block/planks",
+		"break": "game:block/planks"
+	},
+	"selectionBoxes": [
+		{ "x1": 0, "y1": 0, "z1": 0, "x2": 0.6, "y2": 0.4, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } },
+		{ "x1": 0, "y1": 0.4, "z1": 0.15, "x2": 0.6, "y2": 1, "z2": 0.85, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
+	],
+	"collisionBoxes": [
+		{ "x1": 0, "y1": 0, "z1": 0, "x2": 0.6, "y2": 0.4, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } },
+		{ "x1": 0, "y1": 0.4, "z1": 0.15, "x2": 0.6, "y2": 1, "z2": 0.85, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
+	],
+	"guiTransform": {
+		"origin": { "x": 0.5, "y": 1, "z": 0.5 },
+		"scale": ".9"
+	}
+}
+
+
