@@ -6,11 +6,7 @@ namespace Tomes
 {
     public class BlockGutenbergPress : Block
     {
-        public override bool CanPlaceBlock(
-            IWorldAccessor world,
-            IPlayer byPlayer,
-            BlockSelection blockSel,
-            ref string failureCode)
+        public override bool CanPlaceBlock(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
         {
             // Check if the block can be placed by ensuring surrounding spaces are clear
             BlockPos blockPos = blockSel.Position;
@@ -49,19 +45,64 @@ namespace Tomes
             string variant = Variant["side"] as string;
             if (variant == "north")
             {
-
                 // Variant is north, add blocks appropriately
                 //Y1North
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, -1));
+                //Y1Northeast
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northeast-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, -1));
+                //Y1Northwest
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northwest-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, -1));
+                //Y1West
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 0));
 
             } else if (variant == "east") {
-
-                // Variant is east, add blocks appropriately
+                // Variant is east
                 //Y1North
                 toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
                 world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 0));
+                //Y1Northeast
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northeast-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 1));
+                //Y1Northwest
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northwest-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, -1));
+                //Y1West
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, -1));
 
+            } else if (variant == "south") {
+                // Variant is south
+                //Y1North
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, 1));
+                //Y1Northeast
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northeast-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 1));
+                //Y1Northwest
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northwest-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 1));
+                //Y1West
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(1, 0, 0));
+
+            } else if (variant == "west") {
+                // Variant is west
+                //Y1North
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1north-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 0));
+                //Y1Northeast
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northeast-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, -1));
+                //Y1Northwest
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1northwest-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(-1, 0, 1));
+                //Y1West
+                toPlaceBlock = world.GetBlock(new AssetLocation("tomes:gutenbergy1west-" + variant));
+                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, pos.AddCopy(0, 0, 1));
             }
 
         }
@@ -87,13 +128,104 @@ namespace Tomes
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, -1));
                 }
+                //Y1Northeast
+                Block y1Northeast = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, -1));
+                if (y1Northeast.Code.Path == "gutenbergy1northeast-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, -1));
+                }
+                //Y1Northwest
+                Block y1Northwest = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, -1));
+                if (y1Northwest.Code.Path == "gutenbergy1northwest-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, -1));
+                }
+                //Y1West
+                Block y1West = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 0));
+                if (y1West.Code.Path == "gutenbergy1west-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 0));
+                }
             
             } else if (variant == "east") {
-                // Variant is east, remove blocks appropriately
+                // Variant is east
+                //Y1North
                 Block y1North = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 0));
                 if (y1North.Code.Path == "gutenbergy1north-" + variant)
                 {
                     world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 0));
+                }
+                //Y1Northeast
+                Block y1Northeast = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 1));
+                if (y1Northeast.Code.Path == "gutenbergy1northeast-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 1));
+                }
+                //Y1Northwest
+                Block y1Northwest = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, -1));
+                if (y1Northwest.Code.Path == "gutenbergy1northwest-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, -1));
+                }
+                //Y1West
+                Block y1West = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, -1));
+                if (y1West.Code.Path == "gutenbergy1west-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, -1));
+                }
+            
+            } else if (variant == "south") {
+                // Variant is south
+                //Y1North
+                Block y1North = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, 1));
+                if (y1North.Code.Path == "gutenbergy1north-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, 1));
+                }
+                //Y1Northeast
+                Block y1Northeast = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 1));
+                if (y1Northeast.Code.Path == "gutenbergy1northeast-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 1));
+                }
+                //Y1Northwest
+                Block y1Northwest = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 1));
+                if (y1Northwest.Code.Path == "gutenbergy1northwest-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 1));
+                }
+                //Y1West
+                Block y1West = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 0));
+                if (y1West.Code.Path == "gutenbergy1west-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(1, 0, 0));
+                }
+
+            } else if (variant == "west") {
+                // Variant is west
+                //Y1 North
+                Block y1North = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 0));
+                if (y1North.Code.Path == "gutenbergy1north-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 0));
+                }
+                //Y1Northeast
+                Block y1Northeast = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, -1));
+                if (y1Northeast.Code.Path == "gutenbergy1northeast-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, -1));
+                }
+                //Y1Northwest
+                Block y1Northwest = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 1));
+                if (y1Northwest.Code.Path == "gutenbergy1northwest-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(-1, 0, 1));
+                }
+                //Y1West
+                Block y1West = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, 1));
+                if (y1West.Code.Path == "gutenbergy1west-" + variant)
+                {
+                    world.BlockAccessor.SetBlock(0, pos.AddCopy(0, 0, 1));
                 }
             }
 

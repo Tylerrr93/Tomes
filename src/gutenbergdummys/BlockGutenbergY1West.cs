@@ -3,23 +3,35 @@ using Vintagestory.API.MathTools;
 
 namespace Tomes
 {
-    public class BlockGutenbergY1North : Block
+    public class BlockGutenbergY1West : Block
     {
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {
-            // This essentially just reflects the main presses block break behavior onto this block, needed for multiblock structures
+            // Find the main press block to run its OnBlockBroken
+            // Determine the side of the block, or which direction the press structure is facing to run appropriate disassembly 
             string variant = Variant["side"] as string;
-            // Add debug logging to check the variant
+            
             if (variant == "north")
             {
-                // Variant is north, find source block to remove appropriately
+                // Variant is north, find source block to run OnBlockBroken appropriately
+                Block block = world.BlockAccessor.GetBlock(pos.AddCopy(1, 0, 0)) as BlockGutenbergPress;
+                if (block != null) block.OnBlockBroken(world, pos.AddCopy(1, 0, 0), byPlayer, dropQuantityMultiplier);
+            
+            } else if (variant == "east") {
+                // Variant is east
                 Block block = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, 1)) as BlockGutenbergPress;
                 if (block != null) block.OnBlockBroken(world, pos.AddCopy(0, 0, 1), byPlayer, dropQuantityMultiplier);
-            } else if (variant == "east") {
-                // Variant is north, find source block to remove appropriately
+            
+            } else if (variant == "south") {
+                // Variant is south
                 Block block = world.BlockAccessor.GetBlock(pos.AddCopy(-1, 0, 0)) as BlockGutenbergPress;
                 if (block != null) block.OnBlockBroken(world, pos.AddCopy(-1, 0, 0), byPlayer, dropQuantityMultiplier);
+
+            } else if (variant == "west") {
+                //Variant is west
+                Block block = world.BlockAccessor.GetBlock(pos.AddCopy(0, 0, -1)) as BlockGutenbergPress;
+                if (block != null) block.OnBlockBroken(world, pos.AddCopy(0, 0, -1), byPlayer, dropQuantityMultiplier);
             }
 
         }
@@ -37,7 +49,7 @@ namespace Tomes
         // This (if it returns true) allows the player to select individual selection boxes within the block
         public override bool DoParticalSelection(IWorldAccessor world, BlockPos pos)
         {
-            return true;
+            return false;
         }
 
     }
