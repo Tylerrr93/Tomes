@@ -12,7 +12,6 @@ namespace Tomes
             api.RegisterItemClass("itemwaxtablet", typeof (ItemWaxTablet));
             api.RegisterBlockEntityClass("blockentitygutenbergpress", typeof(BlockEntityGutenbergPress));
             api.RegisterBlockClass("blockgutenbergpress", typeof(BlockGutenbergPress));
-            api.RegisterBlockClass("blockgutenbergpresstop", typeof(BlockGutenbergPressTop));
 
             // Gutenberg printing press dummy blocks
             api.RegisterBlockClass("blockgutenbergy1north", typeof(BlockGutenbergY1North));
@@ -21,6 +20,15 @@ namespace Tomes
             api.RegisterBlockClass("blockgutenbergy1west", typeof(BlockGutenbergY1West));
             api.RegisterBlockClass("blockgutenbergy1east", typeof(BlockGutenbergY1East));
             api.RegisterBlockClass("blockgutenbergy1southwest", typeof(BlockGutenbergY1Southwest));
+            api.RegisterBlockClass("blockgutenbergy1southeast", typeof(BlockGutenbergY1Southeast));
+            api.RegisterBlockClass("blockgutenbergy1south", typeof(BlockGutenbergY1South)); 
+            api.RegisterBlockClass("blockgutenbergy1southsouth", typeof(BlockGutenbergY1Southsouth));
+            api.RegisterBlockClass("blockgutenbergy2", typeof(BlockGutenbergY2));
+            api.RegisterBlockClass("blockgutenbergy2west", typeof(BlockGutenbergY2West));
+            api.RegisterBlockClass("blockgutenbergy2east", typeof(BlockGutenbergY2East));
+            api.RegisterBlockClass("blockgutenbergy3", typeof(BlockGutenbergY3));
+            api.RegisterBlockClass("blockgutenbergy3west", typeof(BlockGutenbergY3West));
+            api.RegisterBlockClass("blockgutenbergy3east", typeof(BlockGutenbergY3East));
             
         }
     }

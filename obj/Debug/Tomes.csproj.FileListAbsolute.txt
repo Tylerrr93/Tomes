@@ -44,7 +44,6 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\i
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\patches\paper_patch.json.disabled
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\waxtablet.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergpress.json
-C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergpresstop.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\inventory.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-movable.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-static.json
@@ -55,3 +54,12 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\b
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1west.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1east.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1southwest.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1southeast.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1south.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy1southsouth.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy2.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy2east.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy2west.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3east.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3west.json
