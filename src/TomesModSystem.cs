@@ -20,6 +20,7 @@ namespace Tomes
             api.RegisterBlockClass("blockgutenbergy1northwest", typeof(BlockGutenbergY1Northwest));
             api.RegisterBlockClass("blockgutenbergy1west", typeof(BlockGutenbergY1West));
             api.RegisterBlockClass("blockgutenbergy1east", typeof(BlockGutenbergY1East));
+            api.RegisterBlockClass("blockgutenbergy1southwest", typeof(BlockGutenbergY1Southwest));
             
         }
     }
