@@ -1,11 +1,17 @@
-using Vintagestory.API.Common;
-using Vintagestory.API.MathTools;
 using Vintagestory.API.Client;
+using Vintagestory.API.Common;
+using Vintagestory.API.Config;
+using Vintagestory.API.Datastructures;
+using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
+using Vintagestory.API.Util;
+
 
 namespace Tomes
 {
     public class BlockGutenbergPress : Block
     {
+
         public override bool CanPlaceBlock(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
         {
             // Check if the block can be placed by ensuring surrounding spaces are clear
