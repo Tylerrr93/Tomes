@@ -40,7 +40,7 @@
 		"hit": "game:block/planks"
 	},
 	"collisionBoxes": [
-		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.86, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
+		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.85, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }
 	],
 	"selectionBoxes": [
 		{ "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.86, "z2": 1, "rotateYByType": { "*-west": 90, "*-east": 270, "*-south": 180, "*-north": 0 } }

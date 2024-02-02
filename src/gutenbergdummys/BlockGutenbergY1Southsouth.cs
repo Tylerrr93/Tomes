@@ -8,6 +8,37 @@ namespace Tomes
 {
     public class BlockGutenbergY1Southsouth : Block
     {
+        
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            // Determine orientation of press, then determine block+entity location based on that
+            BlockEntityGutenbergPress be = null;
+            BlockGutenbergPress block = null;
+            string variant = Variant["side"] as string;
+            if (variant == "north") {
+                be = world.BlockAccessor.GetBlockEntity(blockSel.Position.AddCopy(0, 0, -2)) as BlockEntityGutenbergPress;
+                block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(0, 0, -2)) as BlockGutenbergPress;
+            } else if (variant == "east") {
+                be = world.BlockAccessor.GetBlockEntity(blockSel.Position.AddCopy(2, 0, 0)) as BlockEntityGutenbergPress;
+                block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(2, 0, 0)) as BlockGutenbergPress;
+            } else if (variant == "south") {
+                be = world.BlockAccessor.GetBlockEntity(blockSel.Position.AddCopy(0, 0, 2)) as BlockEntityGutenbergPress;
+                block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(0, 0, 2)) as BlockGutenbergPress;
+            } else if (variant == "west") {
+                be = world.BlockAccessor.GetBlockEntity(blockSel.Position.AddCopy(-2, 0, 0)) as BlockEntityGutenbergPress;
+                block = world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(-2, 0, 0)) as BlockGutenbergPress;
+            }
+
+            if (be != null)
+            {
+                // This calls the OnBlockInteractStart method of the Gutenberg block entity (if its found, it always should be)
+                var handled = be.OnBlockInteractStart(byPlayer, blockSel, BlockEntityGutenbergPress.EnumGutenbergPressSection.Frisket);
+                return handled;
+            }
+
+            // If the block and block entity are not found, then just run default interact start behavior
+            return base.OnBlockInteractStart(world, byPlayer, blockSel);
+        }
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {
