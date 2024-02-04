@@ -1,4 +1,4 @@
-using System.Security.Cryptography.X509Certificates;
+
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
@@ -125,12 +125,15 @@ namespace Tomes
         Shape shapeTypecast = Shape.TryGet(Api, "tomes:shapes/gutenbergpress/part-typecast.json");
         var meshSource = shapeTypecast;
 
+
         // If loaded sucessfully...
         if (meshSource != null) {
 
-            ownBlock = Block as BlockGutenbergPress;
+            MeshData meshTempTypecast;
 
-            capi.Tesselator.TesselateShape(ownBlock, meshSource, out meshTypecast, new Vec3f(0, ownBlock.Shape.rotateY, 0));
+            capi.Tesselator.TesselateShape(ownBlock, meshSource, out meshTempTypecast, new Vec3f(0, ownBlock.Shape.rotateY, 0));
+
+            meshTypecast = meshTempTypecast.Clone();
 
         }
 
