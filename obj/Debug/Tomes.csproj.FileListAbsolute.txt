@@ -64,3 +64,4 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\b
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3east.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3west.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-typecast.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\old\part-typecast.json

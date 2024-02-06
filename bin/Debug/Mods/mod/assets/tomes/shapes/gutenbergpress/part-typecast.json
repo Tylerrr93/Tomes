@@ -9,35 +9,17 @@
 		"frameTest3": [128,128]
 	},
 	"textures": {
-		"metal": "block/metal/ingot/lead"
 	},
 	"elements": [
 		{
 			"name": "typecast",
 			"from": [ 3.0, 11.0, 22.0 ],
 			"to": [ 14.0, 12.0, 32.0 ],
+			"autoUnwrap": false,
 			"uv": [ 0.0, 0.0 ],
 			"rotationOrigin": [ 3.0, 11.0, 22.0 ],
 			"faces": {
-				"north": { "texture": "#metal", "uv": [ 0.0, 10.0, 11.0, 11.0 ] },
-				"east": { "texture": "#metal", "uv": [ 11.0, 10.0, 21.0, 11.0 ] },
-				"south": { "texture": "#metal", "uv": [ 21.0, 10.0, 32.0, 11.0 ] },
-				"west": { "texture": "#metal", "uv": [ 32.0, 10.0, 42.0, 11.0 ] },
-				"up": { "texture": "#metal", "uv": [ 0.0, 0.0, 11.0, 10.0 ] },
-				"down": { "texture": "#metal", "uv": [ 11.0, 0.0, 22.0, 10.0 ] }
+				"up": { "texture": "#leadmetal", "uv": [ 0.0, 0.0, 128.0, 128.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] }
 			}
 		}
-	],
-	"animations": [
-		{
-			"name": "TippingClosing",
-			"code": "",
-			"quantityframes": 141,
-			"onActivityStopped": "Rewind",
-			"onAnimationEnd": "Repeat",
-			"keyframes": [
-
-			]
-		}
-	]
-}
+	]}

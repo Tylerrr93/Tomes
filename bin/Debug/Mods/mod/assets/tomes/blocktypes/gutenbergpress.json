@@ -21,7 +21,8 @@
 	"blockmaterial": "wood",
 	"materialDensity": 450,
 	"textures": {
-		"wood": { "base": "block/gutenbergpressuv" }
+		"wood": { "base": "block/gutenbergpressuv" },
+		"leadmetal": { "base": "game:block/metal/ingot/lead" }
 	},
 	"faceCullMode": "NeverCull",
 	"drawtype": "json",
