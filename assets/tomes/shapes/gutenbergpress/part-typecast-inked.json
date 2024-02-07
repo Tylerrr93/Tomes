@@ -19,7 +19,7 @@
 			"uv": [ 0.0, 0.0 ],
 			"rotationOrigin": [ 3.0, 11.0, 22.0 ],
 			"faces": {
-				"up": { "texture": "#parttypecast", "uv": [ 0.0, 0.0, 128.0, 128.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] }
+				"up": { "texture": "#typecastinked", "uv": [ 0.0, 0.0, 128.0, 128.0 ], "autoUv": false, "windMode": [-1,-1,-1,-1] }
 			}
 		}
 	]}
