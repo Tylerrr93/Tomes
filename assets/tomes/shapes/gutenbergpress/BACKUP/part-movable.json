@@ -253,7 +253,7 @@
 		{
 			"name": "tippingclosing",
 			"code": "tippingclosing",
-			"quantityframes": 60,
+			"quantityframes": 141,
 			"onActivityStopped": "Rewind",
 			"onAnimationEnd": "Hold",
 			"keyframes": [
@@ -262,7 +262,9 @@
 					"elements": {
 						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 },
 						"Tipping": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
@@ -277,14 +279,18 @@
 					"frame": 10,
 					"elements": {
 						"Tipping": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
 					"frame": 11,
 					"elements": {
 						"Tipping": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
@@ -292,14 +298,18 @@
 					"elements": {
 						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 },
 						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
 					"frame": 21,
 					"elements": {
 						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
@@ -307,45 +317,82 @@
 					"elements": {
 						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.5 },
 						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
 					"frame": 59,
 					"elements": {
+						"movingRotor": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 },
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.5 },
+						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Screw": { "offsetX": 0.0, "offsetY": -3.1, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 70,
+					"elements": {
 						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.5 },
 						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
 						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
 					}
-				}
-			]
-		},
-		{
-			"name": "screwing",
-			"code": "screwing",
-			"quantityframes": 16,
-			"onActivityStopped": "Rewind",
-			"onAnimationEnd": "Hold",
-			"keyframes": [
+				},
 				{
-					"frame": 0,
+					"frame": 75,
+					"elements": {
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.5 },
+						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 79,
 					"elements": {
 						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.5 },
+						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
 						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
 					}
 				},
 				{
-					"frame": 1,
+					"frame": 80,
 					"elements": {
-						"movingRotor": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
-						"Screw": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": -18.3 },
+						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
 					}
 				},
 				{
-					"frame": 15,
+					"frame": 118,
 					"elements": {
-						"movingRotor": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 },
-						"Screw": { "offsetX": 0.0, "offsetY": -3.1, "offsetZ": 0.0 }
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 },
+						"Tipping": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 130,
+					"elements": {
+						"Tipping": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": -180.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 139,
+					"elements": {
+						"Frisket": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 140,
+					"elements": {
+						"pressFormBottom": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 },
+						"Tipping": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Frisket": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
 					}
 				}
 			]

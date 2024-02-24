@@ -64,7 +64,8 @@ C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\b
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3east.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\blocktypes\gutenbergdummys\gutenbergy3west.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-typecast.json
-C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\old\part-typecast.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\part-typecast-inked.json
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\textures\block\typecast-bare.png
 C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\textures\block\typecast-inked.png
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\BACKUP\gutenbergpress.json
+C:\Users\Tiffany\Desktop\VSModding\Tomes\Tomes\bin\Debug\Mods\mod\assets\tomes\shapes\gutenbergpress\BACKUP\part-movable.json

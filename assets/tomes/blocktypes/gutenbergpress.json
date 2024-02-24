@@ -11,6 +11,7 @@
 		{ "code":"side", "loadFromProperties": "abstract/horizontalorientation"}
 	],
 	"behaviors": [{ "name": "HorizontalOrientable" }], 
+	"entityBehaviors": [{ "name": "Animatable" }], 
 	"shapeInventory": { "base": "gutenbergpress/inventory" },
 	"shapebytype": {
 		"*-north": { "base": "gutenbergpress/part-static", "rotateY": 0 },

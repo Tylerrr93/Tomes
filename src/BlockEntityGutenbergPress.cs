@@ -1,11 +1,13 @@
 
 using System;
+using ProtoBuf;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
+using Vintagestory.API.Util;
 
 namespace Tomes
 {
@@ -44,22 +46,71 @@ namespace Tomes
         public bool typecastIsInked;
         public bool typecastInkedVisible;
 
+        //
+        //
+        //
+
+        [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
+        public class FruitPressAnimPacket
+        {
+            public bool AnimationActive;
+            public float AnimationSpeed;
+        }
+
+        private BlockEntityAnimationUtil animUtil;
+
+        AnimationMetaData gutenbergAnimMeta = new AnimationMetaData()
+        {
+            Animation = "tippingclosing",
+            Code = "tippingclosing",
+            AnimationSpeed = 0.5f
+        };
+
+        public bool CompressAnimFinished
+        {
+            get
+            {
+                RunningAnimation anim = animUtil.animator.GetAnimationState("tippingclosing");
+                return anim.CurrentFrame >= anim.Animation.QuantityFrames - 1;
+            }
+        }
+
+        public bool TippingClosingAnimActive => animUtil.activeAnimationsByAnimCode.ContainsKey("tippingclosing") || animUtil.animator.GetAnimationState("tippingclosing")?.Active == true;
+
+        //
+        //
+        //
+
+
+
         public override void Initialize(ICoreAPI api)
         {
             base.Initialize(api);
             this.ownBlock = Block as BlockGutenbergPress;
             capi = api as ICoreClientAPI;
 
+            animUtil = GetBehavior<BEBehaviorAnimatable>()?.animUtil;
+
             if (ownBlock != null)
             {    
+                Shape shape = Shape.TryGet(api, "tomes:shapes/gutenbergpress/part-movable.json");
+
                 if (api.Side == EnumAppSide.Client)
                 {
-                    Shape shape = Shape.TryGet(api, "tomes:shapes/gutenbergpress/part-movable.json");
+                    //Client side
                     capi.Tesselator.TesselateShape(ownBlock, shape, out meshMovable, new Vec3f(0, ownBlock.Shape.rotateY, 0));
                     Shape shapeTypecast = Shape.TryGet(Api, "tomes:shapes/gutenbergpress/part-typecast.json");
                     capi.Tesselator.TesselateShape(ownBlock, shapeTypecast, out meshTypecast, new Vec3f(0, ownBlock.Shape.rotateY, 0));
                     Shape shapeTypecastInked = Shape.TryGet(Api, "tomes:shapes/gutenbergpress/part-typecast-inked.json");
                     capi.Tesselator.TesselateShape(ownBlock, shapeTypecastInked, out meshTypecastInked, new Vec3f(0, ownBlock.Shape.rotateY, 0));
+                    //Initialize clientside animator
+                    animUtil.InitializeAnimator("gutenbergpress", shape, null, new Vec3f(0, ownBlock.Shape.rotateY, 0));
+
+                } else
+                {
+                    //Server side
+                    //Initialize server side animator
+                    animUtil.InitializeAnimatorServer("gutenbergpress", shape);
                 }
             }
         }
@@ -129,6 +180,8 @@ namespace Tomes
                 typecastIsInked = true;
                 MarkDirty(true);
                 Api.World.PlaySoundAt(typecastSound, Pos.X + 0.5, Pos.Y, Pos.Z + 0.5, byPlayer);
+
+                animUtil.StartAnimation(gutenbergAnimMeta);
             }
 
             // Check if the player's hand slot contains an item and it's a parchment
@@ -155,6 +208,8 @@ namespace Tomes
 
             return true;
         }
+
+        public bool OnBlockInteractStep() 
 
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
         {

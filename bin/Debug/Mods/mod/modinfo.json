@@ -5,9 +5,9 @@
     "authors": [
         "Unknown"
     ],
-    "description": "To be added",
+    "description": "Expanded writing system including stone tablets, wax tablets, and a printing press",
     "version": "1.0.0",
     "dependencies": {
-        "game": ""
+        "game": "1.19.0"
     }
 }
