@@ -11,21 +11,21 @@ Tomes introduces several key elements that integrate seamlessly into the Vintage
 
 ## Clay Tablets:
 
-### Functionality: Early-game writable surfaces for simple notes, recipes, or short messages.
+Functionality: Early-game writable surfaces for simple notes, recipes, or short messages.
 
-### Design Highlight: Custom textures and item behaviors that fit the game's prehistoric/early-industrial aesthetic. This involved graphic design for the tablet's visual appearance and C# coding for its interactive writing mechanics.
+Design Highlight: Custom textures and item behaviors that fit the game's prehistoric/early-industrial aesthetic. This involved graphic design for the tablet's visual appearance and C# coding for its interactive writing mechanics.
 
 ## Detailed Book System:
 
-### Functionality: Craftable books with multiple pages, allowing for extensive writing, storytelling, and record-keeping. Players can write and read complex narratives.
+Functionality: Craftable books with multiple pages, allowing for extensive writing, storytelling, and record-keeping. Players can write and read complex narratives.
 
-### Design Highlight: Custom book models and textures that evolve with different material tiers. The implementation required intricate C# programming for page management, text rendering, saving/loading content, and a user-friendly in-game writing interface.
+Design Highlight: Custom book models and textures that evolve with different material tiers. The implementation required intricate C# programming for page management, text rendering, saving/loading content, and a user-friendly in-game writing interface.
 
 ## Gutenberg Printing Press:
 
-### Functionality: The pinnacle of the mod, this multi-block structure allows players to duplicate written books efficiently. It requires ink, paper, and a master book to operate, simulating a realistic printing process.
+Functionality: The pinnacle of the mod, this multi-block structure allows players to duplicate written books efficiently. It requires ink, paper, and a master book to operate, simulating a realistic printing process.
 
-### Design Highlight: This feature is a significant demonstration of 3D modeling and texturing skills. I designed and created the detailed model for the printing press, ensuring it fits Vintage Story's art style while being visually distinct and mechanically intuitive. The C# codebase manages the complex crafting recipes, multi-block structure placement, inventory management, and the intricate logic behind the printing process itself.
+Design Highlight: This feature is a significant demonstration of 3D modeling and texturing skills. I designed and created the detailed model for the printing press, ensuring it fits Vintage Story's art style while being visually distinct and mechanically intuitive. The C# codebase manages the complex crafting recipes, multi-block structure placement, inventory management, and the intricate logic behind the printing process itself.
 
 ## Skills Demonstrated
 This project highlights a diverse skill set essential for game development and creative technical roles:
