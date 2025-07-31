@@ -1,3 +1,6 @@
+<img width="1920" height="1080" alt="fhdggghffgfgh" src="https://github.com/user-attachments/assets/a1e20a5e-62e4-43c8-a1f5-b6807d47ea9e" />
+<img width="1920" height="1080" alt="jghukgkuyguygygygug" src="https://github.com/user-attachments/assets/657ba711-4c6f-43ac-ba07-bd42a4ccf7aa" />
+
 Tomes: A Literary Expansion for Vintage Story
 Overview
 Tomes is a comprehensive mod for the survival sandbox game Vintage Story, designed to enrich the in-game experience by introducing a robust system for literacy, documentation, and knowledge preservation. This mod transforms how players interact with written information, moving beyond simple notes to offer detailed book creation, historical record-keeping, and the ultimate tool for mass production: the Gutenberg Printing Press.
@@ -73,8 +76,3 @@ Bookcases and Libraries: Functional storage solutions for books.
 Shared Libraries: Potential for multiplayer integration to share written works.
 
 Advanced Writing Tools: Quill and ink systems, different paper types.
-
-Contact
-For any inquiries regarding this project or my skills, please feel free to reach out.
-
-Thank you for your interest in Tomes!
