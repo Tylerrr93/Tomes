@@ -1,5 +1,4 @@
 <img width="1920" height="1080" alt="fhdggghffgfgh" src="https://github.com/user-attachments/assets/a1e20a5e-62e4-43c8-a1f5-b6807d47ea9e" />
-<img width="1920" height="1080" alt="jghukgkuyguygygygug" src="https://github.com/user-attachments/assets/657ba711-4c6f-43ac-ba07-bd42a4ccf7aa" />
 
 Tomes: A Literary Expansion for Vintage Story
 Overview
